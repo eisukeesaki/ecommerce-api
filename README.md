@@ -43,17 +43,6 @@ models
         description
         price
 
-URI
-    users
-        /users
-        /users/{id}
-    sessions
-        /session
-        /sessions/new
-    products
-        /products
-        /products/{id}
-        
 operations on resources and URIs
     users
         HTTP GET /users

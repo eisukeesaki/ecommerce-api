@@ -1,5 +1,10 @@
+const express = require(".");
+const indexRouter = require("./index.router");
+
 function mountRoutes(express) {
-  express.use('/', (req, res) => res.send('you just sent a GET request to /'));
+  const basePath = "/";
+
+  express.use(basePath, indexRouter);
 }
 
 module.exports = {

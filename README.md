@@ -1,140 +1,166 @@
-```
-tasks
-    define models and table relationships
-        user
-        product
-        session
-```
+# mind trace
+
+This file is like a trace of my mind. I maintain it for several purposes.
+
+- organize the problem in order to solve it
+- for the benefit of my future self(and hopefully other people as well)
+  - to use it as a knowledge base
+  - to quickly remember the status of the project
+
+I use mind maps to express, represent and store my understanding of things. The mind map below describes my style of mind mapping.
+
+```text
+
+my mind maps
+    collection
+        nodes
+            representations of relations
+                horizontal arrangement
+                    parent node
+                        contains child
+                        abstracts child
+                        owns child
+                        consists of child
+                    child node
+                        is contained within parent
+                        specifies parent
+                        is owned by parent
+                        constitues parent
+                vertical arrangement
+                    node above
+                        more abstract
+                    node below
+                        more specific
+                    not always considred
+                        just like in this case
 
 ```
+
+The mind maps are not intended to be comprehensive nor complete. They are like snapshops of my understanding of things at a particular point in time, from a particular point of view.
+
+```text
+
+digital shopping cart v0
+    collection
+        data
+            associtation
+                user
+                products
+                    product
+                        title
+                        price
+                quantity
+                    determined by user
+                        input from user
+                shipping cost
+                    static value
+                coupon
+                    identifier
+                    value
+    function
+        calculation
+            total cost
+                sum of product price + shipping cost - coupon value
 
 resources
-    users
-        all records
-        single record
-        registration webpage
-        new record
-    sessions
-        login webpage
-        authentication
-        deletion 
+    view files
+        representation
+            index.html
+            index.js
+        methods
+            GET HTTP/1.1
+        URI
+            /
     products
-        all records
-        single record
-
-models
-    user
-        id
-        full name
-        email
-        password
-        shipping address
-            country
-            phone number
-            full name
-            street
-            suite
-            city
-            province
-            zip code
-    product
-        id
-        title
-        description
-        price
-
-operations on resources and URIs
-    users
-        HTTP GET /users
-            returns all records
-        HTTP GET /users/{id}
-            returns single record
-        HTTP POST /users
-            creates single record
-        HTTP PUT /users/{id}
-            updates single record
-        HTTP DELETE /users/{id}
-            destroys single record
-    sessions
-        HTTP GET /sessions/new
-            returns login webpage
-        HTTP POST /sessions
-            authenticates credentials against database record
-        HTTP DELETE /sessions/{id}
-            destroys single session and redirects to / 
-    product resources
-        HTTP GET /products
-        HTTP GET /products/{id}
-
-resource representation
-    users
-        collection of users
+        representation
             [
               {
-                "id": 1,
-                "fullname": "Leanne Graham",
-                "email": "Sincere@april.biz",
-                "shipping_address": {
-                  "country": "Canada",
-                  "street": "Kulas Light",
-                  "suite": "Apt. 556",
-                  "city": "Gwenborough",
-                  "province": "BC",
-                  "zipcode": "92998-3874",
-                  "phone": "1-770-736-8031"
-                },
-              },
+                "title": "helmet",
+                "price": 500,
+                "image": "https://cloudinary.com/api/images/helmet.jpg"
+               },
               {
-                "id": 2,
-                "fullname": "Ervin Howell",
-                "email": "Shanna@melissa.tv",
-                "shipping_address": {
-                  "country": "Canada",
-                  "street": "Victor Plains",
-                  "suite": "Suite 879",
-                  "city": "Wisokyburgh",
-                  "province": "ON",
-                  "zipcode": "90566-7771",
-                  "phone": "1-770-736-7123"
-                },
-              }
+                "title": "gloves",
+                "price": 200,
+                "image": "https://cloudinary.com/api/images/gloves.jpg"
+               }
             ]
-        single user
+        methods
+            GET
+        URI
+            /products
+    shipping cost
+        representation
             {
-              "id": 1,
-              "fullname": "Leanne Graham",
-              "email": "Sincere@april.biz",
-              "shipping_address": {
-                "country": "Canada",
-                "street": "Kulas Light",
-                "suite": "Apt. 556",
-                "city": "Gwenborough",
-                "province": "BC",
-                "zipcode": "92998-3874",
-                "phone": "1-770-736-8031 x56442"
-              }
+              "shippingCost": 20
             }
-    products
-        collection of products
+        methods
+            GET
+    coupons
+        representation
             {
-              "id": 1,
-              "title": "Mrs. Meyer's Clean Day Dish Soap",
-              "description": "Mrs. Meyer’s Clean Day liquid dish soaps are specifically made to make grease disappear, while also providing a special, singular scent for your entire home. This biodegradable liquid dish soap cuts through grease and is designed for hand washing dishes, pots, and pans. The formula contains plant-derived cleaning ingredients that keeps dishes clean and bright. Made without parabens, phthalates, animal-derived ingredients, and the formula is never tested on animals. Also available in other garden inspired scents and products such as body lotions, laundry detergents, candles, and so much more! Mrs. Meyer’s –rooted in goodness.",
-              "price": 5.49
-            },
-            {
-              "id": 2,
-              "title": "Brita Water Filter Replacement Filters",
-              "description": "Improve the taste of tap water by regularly changing your BPA-free Brita Advanced Replacement Filter. Designed to fit all Brita pitchers and dispensers, this filter reduces the taste and odour of chlorine , to deliver great-tasting water while removing copper, cadmium and mercury. For optimum performance, change your water filter every 151 Litres, or approximately 2 months. One water filter can replace up to 300 standard 500 millilitre water bottles, better for the environment and for your wallet. Keep the great-tasting water flowing with this convenient 3-pack. Get great taste, less waste and more savings from Brita. Disclaimer: the logo on the actual filter is molded into the filter body and does not have a blue colour.",
-              "price": 16.99
+              "couponCode": 1234
             }
-        single product
-            {
-              "id": 1,
-              "title": "Mrs. Meyer's Clean Day Dish Soap",
-              "description": "Mrs. Meyer’s Clean Day liquid dish soaps are specifically made to make grease disappear, while also providing a special, singular scent for your entire home. This biodegradable liquid dish soap cuts through grease and is designed for hand washing dishes, pots, and pans. The formula contains plant-derived cleaning ingredients that keeps dishes clean and bright. Made without parabens, phthalates, animal-derived ingredients, and the formula is never tested on animals. Also available in other garden inspired scents and products such as body lotions, laundry detergents, candles, and so much more! Mrs. Meyer’s –rooted in goodness.",
-              "price": 5.49
-            }
+        methods
+            POST
 
+middlewares
+    serveProductImage
+        extract product-image-URI from product record
+        make HTTP GET request to the URI
+        send downloaded image as response
+            express.static()
+
+UI
+    views
+        index.html
+            functions
+                values
+                    show
+                        product
+                            title
+                            price
+                            quantity
+                        shipping cost
+                        coupon
+                    modify
+                        product
+                            add
+                            remove
+                            quantity
+                    calculator
+                        total cost
+            components
+                store(noun)
+                    item list
+                        item
+                            title
+                            price
+                            image
+                            add to cart
+                cart
+                    shopping cart
+                        product
+                            title
+                            price
+                            quantity
+                            total number of unique products
+                    summary
+                        sum
+                            total product price
+                        shipping cost
+                        coupon form
+                        total cost
+
+front-end script
+    DOM manipulation
+    HTTP requests
+        fetch API
+
+digital shopping cart vN
+    integrate authentication function
+    tax
+    dynamic shipping cost
+    checkout
 ```
 

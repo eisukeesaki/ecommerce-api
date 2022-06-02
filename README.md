@@ -38,6 +38,111 @@ my mind maps
 
 The mind maps are not intended to be comprehensive nor complete. They are like snapshops of my understanding of things at a particular point in time, from a particular point of view.
 
+## issues
+
+How I build computer programs:
+- identify the main issue that I want to solve
+- define minimum viable solution for the main issue
+- recursively break down the main issue into smaller, more specific sub-issues until I know the exact code-level solution for a particular issue
+- code
+  - code a little, test a little, repeat
+    - sizeof "little" will incrementally become larger as my skill develops
+- reassess issues
+- repeat
+
+```text
+
+database
+    tables
+        products
+            id
+                SERIAL PRIMARY KEY
+            title
+                VARCHAR
+            image
+                VARCHAR
+                ?specific type for links
+        shippingcosts
+            all
+                INTEGER
+        coupons
+            id
+                SERIAL PRIMARY KEY
+            code
+                VARCHAR
+        
+web API
+    Node.js
+        listen to requests
+            endpoints
+                /
+                    methods
+                        GET
+                            route control
+                                send view
+                                    markup
+                                    script
+                /products
+                    methods
+                        GET
+                            route control
+                                query database
+                                    SELECT FROM products
+                                send resource representation
+                                    JSON format
+                /coupons
+                    methods
+                        POST
+                            route control
+                                query database
+                                    SELECT FROM coupons WHERE code = req.body.couponCode
+                                compare coupons
+                                    requested
+                                    SELECTed database record
+                                send validity of coupon
+                                  
+UI
+    markup
+        HTML5
+            components
+                store(noun)
+                    product list
+                        product
+                            title
+                            price
+                            image
+                            add to cart
+                cart
+                    shopping cart
+                        product
+                            title
+                            price
+                            quantity
+                            total number of unique products
+                    summary
+                        sum
+                            total product price
+                        shipping cost
+                        coupon form
+                        total cost
+    script
+        JavaScript
+            data fetching
+                products
+                shipping cost
+                coupon validity
+            dynamic markup modification
+                DOM manipulation
+                    store
+                        product components
+                    cart
+                        product component
+                        summary component
+
+```
+
+## initial mind maps
+
 ```text
 
 digital shopping cart v0
@@ -82,7 +187,7 @@ resources
               {
                 "title": "gloves",
                 "price": 200,
-                "image": "https://cloudinary.com/api/images/gloves.jpg"
+                image": "https://cloudinary.com/api/images/gloves.jpg"
                }
             ]
         methods
@@ -132,8 +237,8 @@ UI
                         total cost
             components
                 store(noun)
-                    item list
-                        item
+                    product list
+                        product
                             title
                             price
                             image

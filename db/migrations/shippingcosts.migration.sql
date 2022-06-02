@@ -1,3 +1,4 @@
 CREATE TABLE IF NOT EXISTS shippingcosts (
-  canada INTEGER NOT NULL
+  city VARCHAR(20) NOT NULL,
+  cost INTEGER NOT NULL
 );

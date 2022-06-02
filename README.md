@@ -70,6 +70,10 @@ database
                 SERIAL PRIMARY KEY
             code
                 VARCHAR
+    seeders
+        products
+        shippingcosts
+        coupons
         
 web API
     Node.js

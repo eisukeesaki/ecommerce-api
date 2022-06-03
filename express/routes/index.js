@@ -1,10 +1,11 @@
-const express = require(".");
-const indexRouter = require("./index.router");
-
 function mountRoutes(express) {
+  // const router = require("./router");
+  const productsRouter = require("./products/router");
+
   const basePath = "/";
 
-  express.use(basePath, indexRouter);
+  // express.use(basePath, router);
+  express.use(`${basePath}products`, productsRouter);
 }
 
 module.exports = {

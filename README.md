@@ -94,6 +94,12 @@ web API
                                     SELECT FROM products
                                 send resource representation
                                     JSON format
+                /shippingcosts
+                    methods
+                        GET
+                            route control
+                                query database
+                                send resource representation
                 /coupons
                     methods
                         POST
@@ -142,6 +148,14 @@ UI
                     cart
                         product component
                         summary component
+
+```
+
+## do later
+
+```text
+
+investigate
 
 ```
 

@@ -11,6 +11,7 @@ async function queryTimestamp(pool) {
       console.log("database connection KO")
   } catch (error) {
     console.log(error.stack);
+    res.status(500).end();
   }
 }
 

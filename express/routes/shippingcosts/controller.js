@@ -10,6 +10,7 @@ async function getVancouver(req, res) {
     res.json(records.rows[0]);
   } catch (error) {
     console.log(error.stack);
+    res.status(500).end();
   }
 }
 

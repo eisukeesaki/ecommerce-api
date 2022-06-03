@@ -7,6 +7,7 @@ const { mountRoutes } = require("./routes");
 const express = Express();
 
 express.use(morgan("dev"));
+express.use(Express.urlencoded({ extended: true }));
 express.use(Express.static(path.join(__rootDir, "/ui")));
 
 mountRoutes(express);

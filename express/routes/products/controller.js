@@ -9,6 +9,7 @@ async function getAll(req, res) {
     res.json(records.rows);
   } catch (error) {
     console.log(error.stack);
+    res.status(500).end();
   }
 }
 

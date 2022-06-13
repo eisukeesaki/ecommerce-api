@@ -1,54 +1,6 @@
-# mind trace
-
-This file is like a trace of my mind. I maintain it for several purposes.
-
-- organize the problem in order to solve it
-- for the benefit of my future self(and hopefully other people as well)
-  - to use it as a knowledge base
-  - to quickly remember the status of the project
-
-I use mind maps to express, represent and store my understanding of things. The mind map below describes my style of mind mapping.
-
-```text
-
-my mind maps
-    collection
-        nodes
-            representations of relations
-                horizontal arrangement
-                    parent node
-                        contains child
-                        abstracts child
-                        owns child
-                        consists of child
-                    child node
-                        is contained within parent
-                        specifies parent
-                        is owned by parent
-                        constitues parent
-                vertical arrangement
-                    node above
-                        more abstract
-                    node below
-                        more specific
-                    not always considred
-                        just like in this case
-
-```
-
-The mind maps are not intended to be comprehensive nor complete. They are like snapshops of my understanding of things at a particular point in time, from a particular point of view.
+# E-commerce shopping cart API
 
 ## issues
-
-How I build computer programs:
-- identify the main issue that I want to solve
-- define minimum viable solution for the main issue
-- recursively break down the main issue into smaller, more specific sub-issues until I know the exact code-level solution for a particular issue
-- code
-  - code a little, test a little, repeat
-    - sizeof "little" will incrementally become larger as my skill develops
-- reassess issues
-- repeat
 
 ```text
 
@@ -78,7 +30,7 @@ database
 web API
     Node.js
         listen to requests
-            endpoints
+            OK: endpoints
                 /
                     methods
                         GET
@@ -186,14 +138,6 @@ digital shopping cart v0
                 sum of product price + shipping cost - coupon value
 
 resources
-    view files
-        representation
-            index.html
-            index.js
-        methods
-            GET HTTP/1.1
-        URI
-            /
     products
         representation
             [
@@ -226,6 +170,14 @@ resources
             }
         methods
             POST
+    view files
+        representation
+            index.html
+            index.js
+        methods
+            GET HTTP/1.1
+        URI
+            /
 
 middlewares
     serveProductImage
@@ -286,4 +238,7 @@ digital shopping cart vN
     dynamic shipping cost
     checkout
 ```
+
+## about my mind maps
+[Acekay's information organization language](acekay_knowledge_organization_language.md)
 
